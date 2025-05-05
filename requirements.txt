@@ -1,0 +1,17 @@
+
+openai 
+pandas 
+tqdm
+numpy 
+matplotlib 
+
+scikit-learn 
+streamlit
+sentence-transformers>=2.2.2
+transformers>=4.30.0
+datasets>=2.4.0
+accelerate==0.27.2
+asyncio
+torch
+tensorboard
+pyarrow
