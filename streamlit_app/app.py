@@ -10,56 +10,53 @@ st.set_page_config(page_title="Job Posting Search Engine", layout="centered")
 st.markdown(
     """
     <style>
-    body {
-        background-color: #f5f0fa; /* light purple background */
-        color: #2e003e; /* dark purple text */
+    /* Light purple background */
+    .main {
+        background-color: #f5f0fa;
     }
 
-    .block-container {
-        padding: 2rem 2rem !important;
-        max-width: 1200px;
+    /* Text color */
+    html, body, [class*="css"]  {
+        color: #2e003e;
+        font-family: "Segoe UI", sans-serif;
     }
 
-    .stButton > button {
-        background-color: #7a42f4;
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-    }
-
-    .stButton > button:hover {
-        background-color: #5d2ecc;
-        transition: 0.3s;
-    }
-
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-    }
-
-    .header-container > div {
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.2rem;
+    /* Purple header */
+    .stApp h1 {
         color: #6a1b9a;
     }
 
-    .section-spacing {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+    /* Text input and buttons */
+    .stTextInput > div > input {
+        background-color: #f3e5f5;
+        color: #2e003e;
+    }
+
+    .stButton button {
+        background-color: #7e57c2;
+        color: white;
+        border-radius: 6px;
+    }
+
+    .stButton button:hover {
+        background-color: #5e35b1;
+        transition: 0.3s;
+    }
+
+    /* Info box background */
+    .stAlert {
+        background-color: #ede7f6 !important;
+        color: #4a148c !important;
     }
 
     hr {
         border: none;
-        border-top: 2px solid #b39ddb;
+        border-top: 2px solid #ce93d8;
     }
     </style>
     """,
     unsafe_allow_html=True,
 )
-
 
 # Helper: detect device.
 def get_device():
