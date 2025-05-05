@@ -45,4 +45,4 @@ job_postings_df.to_parquet(
     compression="snappy"
 )
 
-print("✅ Job postings saved to Parquet successfully.")
+print("Job postings saved to Parquet successfully.")

@@ -6,8 +6,8 @@ import pickle
 import time
 
 # Set path to the root of the project
-build_project_path = r"C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data"
-
+#build_project_path = r"C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data"
+build_project_path= os.path.dirname(os.path.abspath(__file__))
 synthetic_data_path = os.path.join(build_project_path, 'synthetic_data')
 data_path = os.path.join(synthetic_data_path, 'data')
 

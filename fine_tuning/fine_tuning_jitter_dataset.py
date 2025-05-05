@@ -10,7 +10,9 @@ from datasets import IterableDataset, Dataset, Features, Value
 from datetime import datetime
 
 # Set paths
-build_project_path = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
+build_project_path= os.path.dirname(os.path.abspath(__file__))
+
+#build_project_path = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
 fine_tuning_path = os.path.join(build_project_path, 'fine_tuning')
 full_jitter_titles_path = os.path.join(build_project_path, 'synthetic_data', 'data', 'jittered_titles.csv')
 

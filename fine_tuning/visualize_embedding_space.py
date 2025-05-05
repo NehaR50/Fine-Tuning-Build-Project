@@ -9,11 +9,16 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
 # Set your project root
-project_root = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
-
+#project_root = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
+project_root = os.path.dirname(os.path.abspath(__file__))
 # Paths for data and model
 test_data_path = os.path.join(project_root, 'fine_tuning', 'data', 'datasets', 'test_ds.csv')
-fine_tuned_model_path = os.path.join(project_root, 'fine_tuning', 'data', 'trained_models', r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data\fine_tuning\data\trained_models\sentence-transformers-paraphrase-MiniLM-L6-v2_triplet_2025-04-29_12-39-22')  # Adjust the folder name as needed
+fine_tuned_model_path = os.path.join(
+    project_root,
+    'fine_tuning', 'data', 'trained_models',
+    'sentence-transformers-paraphrase-MiniLM-L6-v2_triplet_2025-04-29_12-39-22'
+)
+#fine_tuned_model_path = os.path.join(project_root, 'fine_tuning', 'data', 'trained_models', r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data\fine_tuning\data\trained_models\sentence-transformers-paraphrase-MiniLM-L6-v2_triplet_2025-04-29_12-39-22')  # Adjust the folder name as needed
 
 # Load test data
 test_df = pd.read_csv(test_data_path)
