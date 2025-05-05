@@ -59,15 +59,15 @@ if "app_state" not in st.session_state:
 # ----- Functions for loading resources -----
 @st.cache_resource
 def load_fine_tuned_embeddings():
-    return np.load('C:/Users/nehar/Downloads/Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data/streamlit_app/data/fine_tuned_embeddings.npy')
+    return np.load('streamlit_app/data/fine_tuned_embeddings.npy')
 
 @st.cache_resource
 def load_default_embeddings():
-    return np.load('C:/Users/nehar/Downloads/Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data/streamlit_app/data/default_embeddings.npy')
+    return np.load('streamlit_app/data/default_embeddings.npy')
 
 @st.cache_resource
 def load_job_postings():
-    df = pd.read_parquet('C:/Users/nehar/Downloads/Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data/streamlit_app/data/job_postings.parquet')
+    df = pd.read_parquet('streamlit_app/data/job_postings.parquet')
     df['posting'] = df['job_posting_title'] + ' @ ' + df['company']
     return df['posting'].tolist()
 
@@ -75,7 +75,7 @@ def load_job_postings():
 @st.cache_resource
 def load_fine_tuned_model():
     # ✅ Direct full path to model
-    model_path = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data\fine_tuning\data\trained_models\sentence-transformers-paraphrase-MiniLM-L6-v2_triplet_2025-04-29_12-39-22'
+    model_path = r'fine_tuning/data/trained_models/sentence-transformers-paraphrase-MiniLM-L6-v2_triplet_2025-04-29_12-39-22'
     return SentenceTransformer(model_path, device=device)
 
 @st.cache_resource
