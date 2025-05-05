@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
 # Set your project root
-project_root = r'C:\Users\nehar\Downloads\buildG'
+project_root = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
 
 # Paths for data and model
 test_data_path = os.path.join(project_root, 'fine_tuning', 'data', 'datasets', 'test_ds.csv')

@@ -7,7 +7,7 @@ import torch
 from tqdm import trange
 
 # Updated project path for your setup
-project_root = r'C:\Users\nehar\Downloads\buildG'
+project_root = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
 streamlit_app_data_path = os.path.join(project_root, 'streamlit_app', 'data')
 
 def get_device():
