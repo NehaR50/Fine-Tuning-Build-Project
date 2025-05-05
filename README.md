@@ -12,14 +12,16 @@ This is an interactive Streamlit web application that allows users to search for
 | `streamlit_app/`  | Interactive search engine that compares base and fine-tuned similarity results |
 | `visualization`   | t-SNE plots to evaluate semantic clustering of embeddings                      |
 
-### Data Format
+
+## Data Format
 
 Each row in the training data includes:
 seed_title: Canonical job title (e.g., Software Engineer)
 jittered_title: A variation (e.g., S/W Developer II (Full Stack))
 onet_code: Standardized occupational code for stratified splits
 
-### What This Project Does
+
+## What This Project Does
 
   📚 Generates synthetic variations of job titles using LLMs.
   
@@ -32,11 +34,11 @@ onet_code: Standardized occupational code for stratified splits
   🧠 Benchmarks popular LLM APIs for the same task.
 
 
-### Live Demo (Optional)
+## Live Demo (Optional)
 Hosted on Streamlit Cloud. 👉 Try it here: https://nehar50-fine-tuning-a-job-title-embeddi-streamlit-appapp-us2ntv.streamlit.app/
 
 
-### Features
+## Features
 
   🔍 Search for job titles and get top matches.
   
