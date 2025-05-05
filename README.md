@@ -16,8 +16,11 @@ This is an interactive Streamlit web application that allows users to search for
 ## Data Format
 
 Each row in the training data includes:
+
 seed_title: Canonical job title (e.g., Software Engineer)
+
 jittered_title: A variation (e.g., S/W Developer II (Full Stack))
+
 onet_code: Standardized occupational code for stratified splits
 
 
