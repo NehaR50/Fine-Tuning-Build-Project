@@ -10,23 +10,27 @@ st.set_page_config(page_title="Job Posting Search Engine", layout="centered")
 st.markdown(
     """
     <style>
-    /* Light purple background */
     .main {
-        background-color: #f5f0fa;
+        background: linear-gradient(135deg, #f8f3ff, #ffffff);
     }
 
-    /* Text color */
-    html, body, [class*="css"]  {
+    html, body, [class*="css"] {
         color: #2e003e;
         font-family: "Segoe UI", sans-serif;
     }
 
-    /* Purple header */
+    .block-container {
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 0 18px rgba(155, 89, 182, 0.12);
+        border-radius: 12px;
+        padding: 2rem;
+    }
+
     .stApp h1 {
         color: #6a1b9a;
     }
 
-    /* Text input and buttons */
     .stTextInput > div > input {
         background-color: #f3e5f5;
         color: #2e003e;
@@ -43,7 +47,6 @@ st.markdown(
         transition: 0.3s;
     }
 
-    /* Info box background */
     .stAlert {
         background-color: #ede7f6 !important;
         color: #4a148c !important;
