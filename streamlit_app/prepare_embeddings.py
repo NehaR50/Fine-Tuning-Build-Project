@@ -6,9 +6,16 @@ import pandas as pd
 import torch
 from tqdm import trange
 
+#  Automatically detect project root (this file's directory)
+project_root = os.path.dirname(os.path.abspath(__file__))
+
+#  Define relative paths based on project root
+streamlit_app_data_path = os.path.join(project_root, "streamlit_app", "data")
+
 # Updated project path for your setup
-project_root = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
-streamlit_app_data_path = os.path.join(project_root, 'streamlit_app', 'data')
+#project_root = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
+#streamlit_app_data_path = os.path.join(project_root, 'streamlit_app', 'data')
+#streamlit_app_data_path = os.path.join("streamlit_app", "data")
 
 def get_device():
     if torch.cuda.is_available():
@@ -22,13 +29,14 @@ job_postings_df = pd.read_parquet(os.path.join(streamlit_app_data_path, 'job_pos
 job_titles = job_postings_df['job_posting_title'].to_list()
 
 device = get_device()
-print(f'✅ Using device: {device}')
+print(f' Using device: {device}')
 
 # Load models
 default_model = SentenceTransformer('sentence-transformers/paraphrase-MiniLM-L6-v2', device=device)
+fine_tuned_model_path = os.path.join( project_root, "fine_tuning", "data", "trained_models", "sentence-transformers-paraphrase-MiniLM-L6-v2_triplet_2025-04-29_12-39-22")
 
-# 👇 Updated full path to your actual fine-tuned model
-fine_tuned_model_path = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data\fine_tuning\data\trained_models\sentence-transformers-paraphrase-MiniLM-L6-v2_triplet_2025-04-29_12-39-22'
+#  Updated full path to your actual fine-tuned model
+#fine_tuned_model_path = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data\fine_tuning\data\trained_models\sentence-transformers-paraphrase-MiniLM-L6-v2_triplet_2025-04-29_12-39-22'
 fine_tuned_model = SentenceTransformer(fine_tuned_model_path, device=device)
 
 # Generate embeddings in batches
@@ -54,4 +62,4 @@ print(f"🔹 Fine-tuned embeddings shape: {fine_tuned_embeddings.shape}")
 np.save(os.path.join(streamlit_app_data_path, 'default_embeddings.npy'), default_embeddings)
 np.save(os.path.join(streamlit_app_data_path, 'fine_tuned_embeddings.npy'), fine_tuned_embeddings)
 
-print("✅ Embeddings saved successfully.")
+print(" Embeddings saved successfully.")

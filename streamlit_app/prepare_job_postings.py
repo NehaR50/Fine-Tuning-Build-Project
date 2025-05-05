@@ -3,11 +3,19 @@ import pandas as pd
 import numpy as np
 import ast
 
-# Updated Project Root for your setup
-project_root = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
-streamlit_data_path = os.path.join(project_root, 'streamlit_app', 'data')
+DATA_DIR = os.path.join("streamlit_app", "data")
 
-job_postings_df = pd.read_csv(os.path.join(streamlit_data_path, 'job_postings.csv'))
+#  Ensure output directory exists
+os.makedirs(DATA_DIR, exist_ok=True)
+
+#  Load the CSV from your GitHub repo structure
+csv_path = os.path.join(DATA_DIR, "job_postings.csv")
+job_postings_df = pd.read_csv(csv_path)
+
+# Updated Project Root for your setup
+#project_root = r'C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data'
+#streamlit_data_path = os.path.join(project_root, 'streamlit_app', 'data')
+#job_postings_df = pd.read_csv(os.path.join(streamlit_data_path, 'job_postings.csv'))
 
 def extract_first_url(url_str):
     try:

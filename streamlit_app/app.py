@@ -74,7 +74,6 @@ def load_job_postings():
 
 @st.cache_resource
 def load_fine_tuned_model():
-    # ✅ Direct full path to model
     model_path = r'fine_tuning/data/trained_models/sentence-transformers-paraphrase-MiniLM-L6-v2_triplet_2025-04-29_12-39-22'
     return SentenceTransformer(model_path, device=device)
 
@@ -91,19 +90,6 @@ job_postings = load_job_postings()[:5000]
 fine_tuned_model = load_fine_tuned_model()
 default_model = load_default_model()
 
-# =============================================================================
-# State Machine:
-#
-# app_state: "search" -> enter query, "results" -> display search results,
-# "similar_jobs" -> display similar job postings.
-#
-# Transitions:
-# - When user types a query and submits, set app_state = "results"
-# - When user clicks a "Show most similar jobs" button,
-#       set st.session_state.selected_job and app_state = "similar_jobs"
-# - When user clicks "Back to search",
-#       clear selected_job, set app_state = "results" (or "search" if you prefer)
-# =============================================================================
 
 if st.session_state.app_state == "similar_jobs" and st.session_state.selected_job is not None:
     # Similar-jobs view.
@@ -159,8 +145,7 @@ if st.session_state.app_state == "similar_jobs" and st.session_state.selected_jo
         st.session_state.app_state = "results"
         st.rerun()
 else:
-    # Either in the initial search mode or in search results mode.
-    # Use the saved_search value as the default in the text input.
+  
     user_input = st.text_input(
         "Enter a job title:",
         value=st.session_state.get("saved_search", ""),
