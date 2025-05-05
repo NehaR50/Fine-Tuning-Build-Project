@@ -10,28 +10,56 @@ st.set_page_config(page_title="Job Posting Search Engine", layout="centered")
 st.markdown(
     """
     <style>
+    body {
+        background-color: #f5f0fa; /* light purple background */
+        color: #2e003e; /* dark purple text */
+    }
+
     .block-container {
         padding: 2rem 2rem !important;
         max-width: 1200px;
     }
-    .section-spacing {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+
+    .stButton > button {
+        background-color: #7a42f4;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
     }
+
+    .stButton > button:hover {
+        background-color: #5d2ecc;
+        transition: 0.3s;
+    }
+
     .header-container {
         display: flex;
         justify-content: space-between;
         margin-bottom: 1rem;
     }
+
     .header-container > div {
         text-align: center;
         font-weight: bold;
         font-size: 1.2rem;
+        color: #6a1b9a;
+    }
+
+    .section-spacing {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    hr {
+        border: none;
+        border-top: 2px solid #b39ddb;
     }
     </style>
     """,
     unsafe_allow_html=True,
 )
+
 
 # Helper: detect device.
 def get_device():
