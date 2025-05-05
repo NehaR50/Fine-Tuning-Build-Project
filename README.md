@@ -22,9 +22,13 @@ onet_code: Standardized occupational code for stratified splits
 ### What This Project Does
 
   📚 Generates synthetic variations of job titles using LLMs.
+  
   🎯 Fine-tunes a lightweight transformer model using triplet loss.
+  
   🔍 Builds a search engine that compares job title similarity.
+  
   📊 Visualizes how embeddings improve after fine-tuning.
+  
   🧠 Benchmarks popular LLM APIs for the same task.
 
 
@@ -35,8 +39,11 @@ Hosted on Streamlit Cloud. 👉 Try it here: https://nehar50-fine-tuning-a-job-t
 ### Features
 
   🔍 Search for job titles and get top matches.
+  
   🤖 Compare results from:
       SentenceTransformer (default)
       Fine-tuned model (trained using triplet loss)
+      
   📊 View similar job titles based on your selected result.
+  
   ⚡ Powered by Sentence Transformers, PyTorch, and Streamlit.
