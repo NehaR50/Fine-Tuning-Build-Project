@@ -3,5 +3,5 @@ __pycache__/
 *.dll
 *.lib
 *.pt
-*.npy
+
 .DS_Store
