@@ -61,10 +61,10 @@ Synthetic variations were generated using:
     
     Assistant responses logged in .txt and .pkl formats.
 
-### Model Training Summary
+## Model Training Summary
 We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve job title similarity embeddings.
 
-  ## Setup
+  ### Setup
   
   Model: paraphrase-MiniLM-L6-v2 (384d)
   
@@ -76,7 +76,7 @@ We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve jo
   
   Triplet Generation: Dynamic via IterableDataset
 
-  ## Training Config
+  ### Training Config
   
   Epochs: 5
   
