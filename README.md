@@ -100,7 +100,14 @@ We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve jo
   Default model shows more diffuse, overlapping embeddings
 
 
-
-## Live Demo 
+## Deployed on Streamlit Cloud - LIVE DEMO
 Hosted on Streamlit Cloud. 👉 Try it here: https://nehar50-fine-tuning-a-job-title-embeddi-streamlit-appapp-us2ntv.streamlit.app/
+
+
+### Results
+Improved Clustering: The fine-tuned model demonstrates tighter clustering of semantically similar job titles.
+
+Enhanced Similarity Scores: Higher accuracy in measuring job title similarities compared to baseline models.
+
+Interactive Exploration: The Streamlit app allows users to compare similarity scores between the default and fine-tuned models in real-time.
 
