@@ -1,4 +1,4 @@
-# Fine-Tuned Job Title Embedding Model using Synthetic Data
+# Fine-Tuned Job Title Embedding Model using Synthetic Training Data
 
 This is an interactive Streamlit web application that allows users to search for job titles and discover similar job postings using both a default sentence embedding model and a fine-tuned model trained with synthetic data. This project demonstrates a domain-specific sentence embedding model for comparing job titles more effectively than general-purpose models. It uses synthetic variations of job titles (jittered titles) for fine-tuning, enabling enhanced semantic similarity detection in employment-related applications. A visual interface using Streamlit and clustering visualizations using t-SNE are also provided. It combines contrastive learning with LLM-driven data generation, offering a scalable and domain-specific alternative to traditional string matching or off-the-shelf embeddings.
 
@@ -51,7 +51,7 @@ We crafted a contrastive dataset consisting of:
     
    onet_code: ONET job classification code for stratified splitting
 
-Synthetic variations were generated using:
+**Synthetic variations were generated using**:
 
    Initial Prompting (initial_prompt.txt)
     
@@ -66,29 +66,29 @@ We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve jo
 
   ### Setup
   
-  Model: paraphrase-MiniLM-L6-v2 (384d)
+  **Model**: paraphrase-MiniLM-L6-v2 (384d)
   
-  Loss: TripletLoss with margin 0.3
+  **Loss**: TripletLoss with margin 0.3
   
-  Structure: Anchor = jittered title, Positive = seed title, Negative = random seed title
+  **Structure**: Anchor = jittered title, Positive = seed title, Negative = random seed title
   
-  Dataset: Split into train/val/test (train_ds.csv, val_ds.csv, test_ds.csv)
+  **Dataset**: Split into train/val/test (train_ds.csv, val_ds.csv, test_ds.csv)
   
-  Triplet Generation: Dynamic via IterableDataset
+  **Triplet Generation**: Dynamic via IterableDataset
 
   ### Training Config
   
-  Epochs: 5
+  **Epochs**: 5
   
-  Batch Size: 64
+  **Batch Size**: 64
   
-  Eval per Epoch: 4 times
+  **Eval per Epoch**: 4 times
   
-  Optimizer: AdamW with warm-up
+  **Optimizer**: AdamW with warm-up
   
-  Checkpoints: Saved to fine_tuning/data/trained_models/
+  **Checkpoints**: Saved to fine_tuning/data/trained_models/
   
-  Final Model: Saved to streamlit_app/data/fine_tuned_model/
+  **Final Model**: Saved to streamlit_app/data/fine_tuned_model/
 
  ## Embedding Visualization
  We used t-SNE to reduce high-dimensional embeddings (768D) to 2D.
@@ -104,14 +104,14 @@ We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve jo
 
 
 ## Deployed on Streamlit Cloud - LIVE DEMO
-Hosted on Streamlit Cloud. 👉 Try it here: https://nehar50-fine-tuning-a-job-title-embeddi-streamlit-appapp-us2ntv.streamlit.app/
+**Hosted on Streamlit Cloud**. 👉 Try it here: https://nehar50-fine-tuning-a-job-title-embeddi-streamlit-appapp-us2ntv.streamlit.app/
 
 
 
 ## Results
-Improved Clustering: The fine-tuned model demonstrates tighter clustering of semantically similar job titles.
+**Improved Clustering**: The fine-tuned model demonstrates tighter clustering of semantically similar job titles.
 
-Enhanced Similarity Scores: Higher accuracy in measuring job title similarities compared to baseline models.
+**Enhanced Similarity Scores**: Higher accuracy in measuring job title similarities compared to baseline models.
 
-Interactive Exploration: The Streamlit app allows users to compare similarity scores between the default and fine-tuned models in real-time.
+**Interactive Exploration**: The Streamlit app allows users to compare similarity scores between the default and fine-tuned models in real-time.
 
