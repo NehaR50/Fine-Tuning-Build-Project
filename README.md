@@ -98,8 +98,7 @@ We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve jo
   Fine-tuned model forms tight, distinct clusters
   
   Default model shows more diffuse, overlapping embeddings
- ![image alt][file:///C:/Users/nehar/Downloads/Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data/fine_tuning/embedding_visualization.png
-C:\Users\nehar\Downloads\Fine-Tuning-Embedding-Model-Using-Synthetic-Training-Data\fine_tuning\embedding_visualization.png](https://github.com/NehaR50/Fine-Tuning-a-Job-Title-Embedding-Model-Using-Synthetic-Training-Data/blob/main/fine_tuning/embedding_visualization.png?raw=true)
+  ![image alt](https://github.com/NehaR50/Fine-Tuning-a-Job-Title-Embedding-Model-Using-Synthetic-Training-Data/blob/e09fc5b832c9097753086763dd918f329281bdca/fine_tuning/embedding_visualization.png)
 
 ## Deployed on Streamlit Cloud - LIVE DEMO
 Hosted on Streamlit Cloud. 👉 Try it here: https://nehar50-fine-tuning-a-job-title-embeddi-streamlit-appapp-us2ntv.streamlit.app/
