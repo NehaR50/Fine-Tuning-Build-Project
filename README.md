@@ -5,28 +5,28 @@ This is an interactive Streamlit web application that allows users to search for
 
 ## What This Project Does
 
-  📚 Generates synthetic variations of job titles using LLMs.
-  
-  🎯 Fine-tunes a lightweight transformer model using triplet loss.
-  
-  🔍 Builds a search engine that compares job title similarity.
-  
-  📊 Visualizes how embeddings improve after fine-tuning.
-  
-  🧠 Benchmarks popular LLM APIs for the same task.
+      📚 Generates synthetic variations of job titles using LLMs.
+      
+      🎯 Fine-tunes a lightweight transformer model using triplet loss.
+      
+      🔍 Builds a search engine that compares job title similarity.
+      
+      📊 Visualizes how embeddings improve after fine-tuning.
+      
+      🧠 Benchmarks popular LLM APIs for the same task.
 
 
 ## Features
 
-  🔍 Search for job titles and get top matches.
-  
-  🤖 Compare results from:
-      SentenceTransformer (default)
-      Fine-tuned model (trained using triplet loss)
+      🔍 Search for job titles and get top matches.
       
-  📊 View similar job titles based on your selected result.
-  
-  ⚡ Powered by Sentence Transformers, PyTorch, and Streamlit.
+      🤖 Compare results from:
+          SentenceTransformer (default)
+          Fine-tuned model (trained using triplet loss)
+          
+      📊 View similar job titles based on your selected result.
+      
+      ⚡ Powered by Sentence Transformers, PyTorch, and Streamlit.
 
 
 
@@ -95,10 +95,10 @@ We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve jo
 
  ## Outcome:
 
-  Fine-tuned model forms tight, distinct clusters
-  
-  Default model shows more diffuse, overlapping embeddings
-  
+      Fine-tuned model forms tight, distinct clusters
+      
+      Default model shows more diffuse, overlapping embeddings
+      
   ![image alt](https://github.com/NehaR50/Fine-Tuning-a-Job-Title-Embedding-Model-Using-Synthetic-Training-Data/blob/e09fc5b832c9097753086763dd918f329281bdca/fine_tuning/embedding_visualization.png)
 
 
