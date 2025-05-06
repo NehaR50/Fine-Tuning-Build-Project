@@ -61,9 +61,36 @@ Synthetic variations were generated using:
     
     Assistant responses logged in .txt and .pkl formats.
 
+### Model Training Summary
+We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve job title similarity embeddings.
+
+  ## Setup
+  
+  Model: paraphrase-MiniLM-L6-v2 (384d)
+  
+  Loss: TripletLoss with margin 0.3
+  
+  Structure: Anchor = jittered title, Positive = seed title, Negative = random seed title
+  
+  Dataset: Split into train/val/test (train_ds.csv, val_ds.csv, test_ds.csv)
+  
+  Triplet Generation: Dynamic via IterableDataset
+
+  ## Training Config
+  
+  Epochs: 5
+  
+  Batch Size: 64
+  
+  Eval per Epoch: 4 times
+  
+  Optimizer: AdamW with warm-up
+  
+  Checkpoints: Saved to fine_tuning/data/trained_models/
+  
+  Final Model: Saved to streamlit_app/data/fine_tuned_model/
 
 
-
-## Live Demo (Optional)
+## Live Demo 
 Hosted on Streamlit Cloud. 👉 Try it here: https://nehar50-fine-tuning-a-job-title-embeddi-streamlit-appapp-us2ntv.streamlit.app/
 
