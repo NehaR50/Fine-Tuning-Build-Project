@@ -5,28 +5,28 @@ This is an interactive Streamlit web application that allows users to search for
 
 ## What This Project Does
 
-      📚 Generates synthetic variations of job titles using LLMs.
+ 📚 Generates synthetic variations of job titles using LLMs.
       
-      🎯 Fine-tunes a lightweight transformer model using triplet loss.
+ 🎯 Fine-tunes a lightweight transformer model using triplet loss.
       
-      🔍 Builds a search engine that compares job title similarity.
+  🔍 Builds a search engine that compares job title similarity.
       
-      📊 Visualizes how embeddings improve after fine-tuning.
+ 📊 Visualizes how embeddings improve after fine-tuning.
       
-      🧠 Benchmarks popular LLM APIs for the same task.
+ 🧠 Benchmarks popular LLM APIs for the same task.
 
 
 ## Features
 
-      🔍 Search for job titles and get top matches.
+  🔍 Search for job titles and get top matches.
       
-      🤖 Compare results from:
-          SentenceTransformer (default)
-          Fine-tuned model (trained using triplet loss)
+ 🤖 Compare results from:
+      SentenceTransformer (default)
+      Fine-tuned model (trained using triplet loss)
           
-      📊 View similar job titles based on your selected result.
+ 📊 View similar job titles based on your selected result.
       
-      ⚡ Powered by Sentence Transformers, PyTorch, and Streamlit.
+ ⚡ Powered by Sentence Transformers, PyTorch, and Streamlit.
 
 
 
