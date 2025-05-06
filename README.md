@@ -101,8 +101,11 @@ We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve jo
   
   ![image alt](https://github.com/NehaR50/Fine-Tuning-a-Job-Title-Embedding-Model-Using-Synthetic-Training-Data/blob/e09fc5b832c9097753086763dd918f329281bdca/fine_tuning/embedding_visualization.png)
 
+
+
 ## Deployed on Streamlit Cloud - LIVE DEMO
 Hosted on Streamlit Cloud. 👉 Try it here: https://nehar50-fine-tuning-a-job-title-embeddi-streamlit-appapp-us2ntv.streamlit.app/
+
 
 
 ## Results
