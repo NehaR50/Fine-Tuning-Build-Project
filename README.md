@@ -90,6 +90,16 @@ We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve jo
   
   Final Model: Saved to streamlit_app/data/fine_tuned_model/
 
+ ## Embedding Visualization
+ We used t-SNE to reduce high-dimensional embeddings (768D) to 2D.
+
+ ## Outcome:
+
+  Fine-tuned model forms tight, distinct clusters
+  
+  Default model shows more diffuse, overlapping embeddings
+
+
 
 ## Live Demo 
 Hosted on Streamlit Cloud. 👉 Try it here: https://nehar50-fine-tuning-a-job-title-embeddi-streamlit-appapp-us2ntv.streamlit.app/
