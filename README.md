@@ -45,21 +45,21 @@ This is an interactive Streamlit web application that allows users to search for
 
 We crafted a contrastive dataset consisting of:
 
-    seed_title: Canonical job title (e.g., "Software Engineer")
+   seed_title: Canonical job title (e.g., "Software Engineer")
     
-    jittered_title: Variant generated using LLMs (e.g., "Software Eng II (Fullstack)")
+   jittered_title: Variant generated using LLMs (e.g., "Software Eng II (Fullstack)")
     
-    onet_code: ONET job classification code for stratified splitting
+   onet_code: ONET job classification code for stratified splitting
 
 Synthetic variations were generated using:
 
-    Initial Prompting (initial_prompt.txt)
+   Initial Prompting (initial_prompt.txt)
     
-    Follow-Up Prompting (follow_up_prompt.txt)
+   Follow-Up Prompting (follow_up_prompt.txt)
     
-    Intermediate Jitter Strategies (intermediate_jitter_prompt.txt)
+   Intermediate Jitter Strategies (intermediate_jitter_prompt.txt)
     
-    Assistant responses logged in .txt and .pkl formats.
+   Assistant responses logged in .txt and .pkl formats.
 
 ## Model Training Summary
 We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve job title similarity embeddings.
@@ -95,9 +95,9 @@ We fine-tuned the paraphrase-MiniLM-L6-v2 model using triplet loss to improve jo
 
  ## Outcome:
 
-      Fine-tuned model forms tight, distinct clusters
+     Fine-tuned model forms tight, distinct clusters
       
-      Default model shows more diffuse, overlapping embeddings
+     Default model shows more diffuse, overlapping embeddings
       
   ![image alt](https://github.com/NehaR50/Fine-Tuning-a-Job-Title-Embedding-Model-Using-Synthetic-Training-Data/blob/e09fc5b832c9097753086763dd918f329281bdca/fine_tuning/embedding_visualization.png)
 
